@@ -16,7 +16,7 @@ html {
   height: auto;
   min-height: 701px;
   border-radius: 48px;
-  background: rgba(19, 15, 64, 0.03);
+  background: #130f4008;
   padding: 25px;
 }
 .center-h1 {
@@ -69,7 +69,7 @@ html {
 .no3 {
   height: 40px;
   width: 40px;
-  margin-left: 9px;
+  margin-left: 25px;
   background-color: #3498db;
   border-radius: 50%;
 }
@@ -112,19 +112,19 @@ html {
 }
 .timeline1 {
   margin-right: 26px;
+  margin-top: 30px;
 }
 .timeline2 {
   width: 144px;
   height: 9px;
   flex-shrink: 0;
   border-radius: 203.589px;
-  background: #eee;
+  background: #3498db;
   margin-right: 26px;
   margin-top: 64px;
 }
 .timeline3 {
-  margin-right: 26px;
-  margin-top: 30px;
+  margin-right: 23px;
 }
 .timeline4 {
   width: 144px;
@@ -156,70 +156,45 @@ html {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  margin: 0;
-}
-.inputform {
+  line-height: normal;
   margin-top: 40px;
+}
+.container {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
-.inline-form {
-  display: inline-block;
-  margin-right: 10px;
-  width: 765px;
+.radiobtn {
+  text-align: left;
 }
-
-.findID {
-  border-radius: 8px;
-  padding: 12px 27.94px 12px 28px;
-  margin-left: 40px;
-  background: #3498db;
-  border: none;
-  font-family: "amazon_ember";
-  color: #fff;
-  text-align: center;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
-  text-transform: capitalize;
-  box-shadow: 0px 2px 4px 0px #00000040;
-}
-.form-group label {
-  font-family: "amazon_ember";
-  display: block;
-  color: #232f3f;
-  font-size: 16px;
+.radiobtn label {
+  color: #000;
+  font-family: Amazon Ember;
+  font-size: 17px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  margin: 10px 0;
+  text-align: center;
 }
-form input {
-  width: 765px;
-  height: 0.5px;
-  outline: none;
-}
-input[type="text"] {
-  width: 100%;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border: none;
-  background-color: #f6f6f6;
-  border-bottom: 2px solid #232f3f;
+.radiobtn input[type="radio"] {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  margin-bottom: 16px;
 }
 .next {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 60px;
 }
 .nextbtn {
   display: flex;
   padding: 12px 27.94px 12px 28px;
   align-items: center;
   border-radius: 8px;
-  background: #999;
+  background: #3498db;
   border: none;
   font-family: "amazon_ember";
   color: #ffffff;
@@ -231,82 +206,60 @@ input[type="text"] {
   text-transform: capitalize;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
 }
-.error1 {
-  padding-top: 15px;
-  width: 920px;
-  height: 40px;
-  margin: 0 auto;
-  color: #f44336;
-  font-family: "amazon_ember";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
-  text-transform: capitalize;
+.rating {
+  position: flex;
+  margin-left: 35px;
+  margin-top: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(180deg);
+  display: flex;
+}
+.rating input {
   display: none;
 }
-.error2 {
-  padding-top: 15px;
-  width: 920px;
-  height: 40px;
-  margin: 0 auto;
-  color: #f44336;
-  font-family: "amazon_ember";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
-  text-transform: capitalize;
+.rating label {
+  display: block;
+  cursor: pointer;
+  width: 31px;
+  margin-right: 10px;
 }
-
-@media (max-width: 1330px) {
-  .inline-form {
-    width: 580px;
-  }
-  .error1,
-  .error2 {
-    width: 720px;
-  }
-  .findID {
-    margin-left: 25px;
-  }
+.rating label:before {
+  content: "\f005";
+  font-family: fontAwesome;
+  position: relative;
+  display: block;
+  font-size: 31px;
+  color: #3498db;
+  border: #000;
+  top: 0;
 }
-@media (max-width: 1024px) {
-  .inline-form {
-    width: 420px;
-  }
-  .error1,
-  .error2 {
-    width: 560px;
-  }
-  .info {
-    width: 100%;
-  }
+.rating label:after {
+  content: "\f005";
+  font-family: fontAwesome;
+  position: absolute;
+  display: block;
+  font-size: 31px;
+  color: #7a8892;
+  border: #000;
+  top: 0;
+  opacity: 0;
+  transition: 0.5s;
 }
-@media (max-width: 620px) {
-  .inline-form {
-    width: 300px;
-  }
-  .error1,
-  .error2 {
-    width: 440px;
-  }
-  .info {
-    width: 100%;
-  }
+.rating label:hover:after {
+  content: "\f005";
+  font-family: fontAwesome;
+  position: absolute;
+  display: block;
+  font-size: 31px;
+  color: #7a8892;
+  border: #000;
+  top: 0;
+  opacity: 1;
+  transition: 0.5s;
 }
-@media (max-width: 470px) {
-  .inline-form {
-    width: 200px;
-  }
-  .error1,
-  .error2 {
-    width: 300px;
-  }
-  .info {
-    width: 100%;
-  }
-  .findID {
-    font-weight: 300;
-  }
+.rating label:hover:after,
+.rating label:hover ~ label:after,
+.rating input:checked ~ label:after {
+  opacity: 1;
 }
