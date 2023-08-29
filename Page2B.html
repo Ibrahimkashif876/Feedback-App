@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="fonts/stylesheet.css" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
     <title>Document</title>
   </head>
   <body>
@@ -13,11 +17,11 @@
         <h1 class="center-h1">Thank you for your order</h1>
         <div class="timeline">
           <div class="timeline1">
-            <p class="p1">Your Order</p>
             <div class="no1"><p class="lowerP1">1</p></div>
           </div>
           <div class="timeline2"></div>
           <div class="timeline3">
+            <p class="p1">Your Feedback</p>
             <div class="no3"><p class="lowerP3">2</p></div>
           </div>
           <div class="timeline4"></div>
@@ -25,28 +29,34 @@
             <div class="no5"><p class="lowerP5">3</p></div>
           </div>
         </div>
-        <div class="info">
-          <p class="info1">Please enter your AMAZON ORDER ID here.</p>
-          <p class="info2">
-            Use the "FIND ID" button to get it easily from your AMAZON Older
-            History page.
-          </p>
-        </div>
         <div class="inputform">
           <div class="form-group">
             <form class="inline-form">
-              <label>Your Order ID</label>
-              <input type="text" id="orderID" name="orderID" />
+              <div class="form-row">
+                <label for="shortExpectation"
+                  >Why is this item short of your expectation?
+                  <span class="required-field">*</span></label
+                >
+              </div>
+              <div class="form-row">
+                <input
+                  type="text"
+                  id="shortExpectation"
+                  name="shortExpectation"
+                />
+              </div>
+              <div class="form-row">
+                <label for="improve"
+                  >How would you like us to improve?
+                  <span class="required-field">*</span></label
+                >
+              </div>
+              <div class="form-row">
+                <input type="text" id="improve" name="improve" />
+              </div>
             </form>
           </div>
-          <button class="findID">FIND ID</button>
         </div>
-        <div class="error1">
-          Oops! It seems like the Order ID you entered doesn't match any records
-          in our database. Entered the correct ID and try again. please feel
-          free to contact us at lvdgift@gmail.com if there are any problems!
-        </div>
-        <div class="error2">Oops! It looks like the order ID you entered has already been used. Please make sure to double-check the ID and try again. please feel free to contact us at lvdgift@gmail.com if there are any problems!/div>
         <div class="next"><button class="nextbtn">NEXT</button></div>
       </div>
     </div>
